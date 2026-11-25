@@ -1,0 +1,32 @@
+[project]
+name = "karaoke"
+version = "0.1.0"
+description = "卡拉OK视频生成器"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "torch==2.8.0",
+  "torchaudio==2.8.0",
+  "torchvision==0.23.0",
+  "audio-separator[gpu]",
+  "faster-whisper",
+  "yt-dlp[default]",
+  "deno",
+  "imageio-ffmpeg",
+  "pypinyin",
+  "opencc-python-reimplemented",
+  "gradio>=5",
+  "pillow",
+  "soundfile",
+  "numpy",
+  "requests",
+  "audioread>=3.1.0",
+  "static-ffmpeg>=3.0",
+]
+[[tool.uv.index]]
+name = "cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+[tool.uv.sources]
+torch = { index = "cu128" }
+torchaudio = { index = "cu128" }
+torchvision = { index = "cu128" }
